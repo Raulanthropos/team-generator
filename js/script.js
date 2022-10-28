@@ -36,7 +36,7 @@ const addTeam = () => {
     const teamList = document.querySelector(".teams-list");
     const newTeam = document.createElement("ul");
     let counterNumber = parseInt(counter.value);
-    newTeam.innerText = "Team" + " " + counterNumber;
+    newTeam.innerText = "Team" + " " + counterNumber + " " + "🥘";
     newTeam.classList.add("new-team");
     newTeam.style.paddingBottom = "10px";
     newTeam.style.paddingRight = "30px";
