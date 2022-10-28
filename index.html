@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+    <title>TEAM GENERATOR</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="names-container">
+        <h1>TEAM GENERATOR</h1>
+        <h2>Add member</h2>
+        <input type="text" placeholder="Name" id="input-field-name" />
+        <input type="button" id="button-add" class="button-79" value="Add" />
+      </div>
+      <div class="teams-container">
+        <h2>Teams</h2>
+        <input
+          type="button"
+          id="button-decr"
+          class="button-79 button-minus-plus"
+          value="-"
+        />
+        <input type="number" id="input-field-teams" value="0"/>
+        <input
+          type="button"
+          id="button-incr"
+          class="button-79 button-minus-plus"
+          value="+"
+        />
+      </div>
+    </main>
+    <div class="bottom-container">
+      <div class="list-and-buttons">
+        <ul class="listee"></ul>
+        <div class="buttons">
+          <input
+            type="button"
+            id="assign-member"
+            class="button-79 button-minus-plus"
+            value="Assign member"
+          />
+          <input type="button" id="reset" value="Reset" />
+        </div>
+      </div>
+      <div class="teams-list">
+    </div>
+    </div>
+  </body>
+</html>
