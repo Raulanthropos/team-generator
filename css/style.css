@@ -11,24 +11,19 @@ body {
   background-color: black;
 }
 
-.main-container {
+.main-container, .bottom-container {
   max-width: 900px;
   background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
-  flex-wrap: wrap;
 }
 
 .bottom-container {
-  max-width: 900px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+    height: 60vh;
   gap: 2vw;
+  align-items: flex-start;
 }
 
 .teams-container {
@@ -95,7 +90,7 @@ body {
 }
 
 .button-minus-plus {
-  padding: 8px;
+  padding: 2px 8px;
 }
 
 .buttons {
