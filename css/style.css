@@ -12,7 +12,7 @@ body {
 }
 
 .main-container, .bottom-container {
-  max-width: 900px;
+  max-width: 60vw;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -118,4 +118,5 @@ body {
 
 .list-of-names {
     border: 2px solid lightgray;
+    padding: 2vh 2vw;
 }

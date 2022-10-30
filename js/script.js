@@ -4,6 +4,7 @@ let addButton = document.getElementById("button-incr");
 let remButton = document.getElementById("button-decr");
 let counter = document.getElementById("input-field-teams");
 let count = 0;
+let nameList = [];
 const assignMember = document.getElementById("assign-member");
 const resetButton = document.getElementById("reset");
 
@@ -21,6 +22,9 @@ addButton.addEventListener('click', buttonAdd);
 remButton.addEventListener('click', buttonRemove);
 
 const addListItem = function() {
+    if (listeeClass.value === "") {
+        return;
+    }
     const unorderedList = document.querySelector(".listee");
     const newListItem = document.createElement("li");
     newListItem.style.fontSize = "18px";
@@ -36,11 +40,17 @@ const addTeam = () => {
     const teamList = document.querySelector(".teams-list");
     const newTeam = document.createElement("ul");
     let counterNumber = parseInt(counter.value);
-    newTeam.innerText = "Team" + " " + counterNumber + " " + "🥘";
+    newTeam.innerText = "Team" + " " + counterNumber;
     newTeam.classList.add("new-team");
     newTeam.style.paddingBottom = "10px";
     newTeam.style.paddingRight = "30px";
     teamList.appendChild(newTeam);
+}
+
+const removeTeam = () => {
+    const newTeam = document.querySelectorAll(".new-team");
+    let counterNumber = parseInt(counter.value);
+    newTeam[counterNumber].remove();
 }
 
 const assignMemberToTeam = () => {
@@ -48,21 +58,22 @@ const assignMemberToTeam = () => {
     const unorderedList = document.querySelector(".listee");
     const newTeamItem = document.createElement("span");
     newTeamItem.innerText = unorderedList.lastChild.innerText;
-    teamList.appendChild(newTeamItem);
     newTeamItem.classList.add("list-of-names");
+    teamList.appendChild(newTeamItem);
 }
 
+const resetNames = () => {
+    const unorderedList = document.querySelector(".listee");
+    unorderedList.innerHTML = "";
+}
+
+resetButton.addEventListener('click', resetNames);
 
 assignMember.addEventListener('click', assignMemberToTeam);
 
-// const removeTeam = () => {
-//     const teamList = document.querySelector(".teams-list");
-//     const item = teamList.lastChild;
-//     delete item;
-// }
-
 addButton.addEventListener('click', addTeam);
-// remButton.addEventListener('click', removeTeam);
+
+remButton.addEventListener('click', removeTeam);
 
 
 
