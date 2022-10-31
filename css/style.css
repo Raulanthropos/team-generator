@@ -42,6 +42,7 @@ body {
   width: 20vw;
   border: 2px solid lightgray;
   margin-right: 0;
+  overflow-y: scroll;
 }
 
 .teams-list {
