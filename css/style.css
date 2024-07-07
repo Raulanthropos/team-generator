@@ -121,3 +121,10 @@ body {
     border: 2px solid lightgray;
     padding: 2vh 2vw;
 }
+
+/* Teams list item styling */
+.team {
+  border: 2px solid lightgray;
+  padding: 1.5vh 0.5vw;
+  margin-bottom: 10px;
+}
